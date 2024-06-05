@@ -24,7 +24,7 @@ const PrevPage = () => {
             alignItems: "center",
             borderRadius: 10,
             }}
-            onPress={() => { router.replace('../../Item'); }}
+            onPress={() => { router.replace('../../Home'); }}
             >
             <Text style={{fontSize: 35}}>◀</Text>
             </TouchableOpacity>

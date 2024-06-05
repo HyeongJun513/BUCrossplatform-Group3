@@ -25,22 +25,22 @@ export default function RootLayout() {
                     headerTitle: "Home",
                 }}
             />
-            <Stack.Screen
+            {/* <Stack.Screen
                 name="Item"
                 options={{
                     headerTitle: "Item",
                 }}
-            />
-            <Stack.Screen
+            /> */}
+            {/* <Stack.Screen
                 name="List"
                 options={{
                     headerTitle: "List",
                 }}
-            />
+            /> */}
             <Stack.Screen
                 name="App"
                 options={{
-                    headerTitle: "Quiz",
+                    headerTitle: "App",
                 }}
             />
             <Stack.Screen
@@ -53,6 +53,12 @@ export default function RootLayout() {
                 name="Park/Quest2/Q2"
                 options={{
                     headerTitle: "Quiz2",
+                }}
+            />
+            <Stack.Screen
+                name="Park/Quest3/Q3"
+                options={{
+                    headerTitle: "Quiz3",
                 }}
             />
         </Stack>
