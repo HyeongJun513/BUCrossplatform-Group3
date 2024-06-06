@@ -16,7 +16,7 @@ const App = () => {
             borderRadius: 10,
             margin: 10,
             }} onPress={() => { router.replace('/Park/Quest1/Q1'); }}>
-            <Text style={{fontSize: 35}}>Park / Q1 이동</Text>
+            <Text style={{fontSize: 25}}>Park / 문제1 이동</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={{
@@ -28,7 +28,31 @@ const App = () => {
             borderRadius: 10,
             margin: 10,
             }} onPress={() => { router.replace('/Park/Quest2/Q2'); }}>
-            <Text style={{fontSize: 35}}>Park / Q2 이동</Text>
+            <Text style={{fontSize: 25}}>Park / 문제2 이동</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={{
+            backgroundColor: "skyblue",
+            height: 50,
+            borderRadius: 8,
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: 10,
+            margin: 10,
+            }} onPress={() => { router.navigate('/Lee/Q_1/App'); }}>
+            <Text style={{fontSize: 25}}> Lee / 문제 이동</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={{
+            backgroundColor: "skyblue",
+            height: 50,
+            borderRadius: 8,
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: 10,
+            margin: 10,
+            }} onPress={() => { router.navigate('/Yang/Q3_12/App'); }}>
+            <Text style={{fontSize: 25}}> Yang / 문제 이동</Text>
             </TouchableOpacity>
 
         </View>
