@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity } from 'react-native';
-import { StatusBar } from "react-native";
+import React, { useState } from "react";
+import { Text, SafeAreaView, ScrollView, Image } from 'react-native';
 import styled from 'styled-components/native';
 import ChickenImage0 from './Image/chicken0.png';
 import ChickenImage90 from './Image/chicken90.png';
@@ -15,7 +14,6 @@ import BicycleImage90 from './Image/bicycle90.png';
 import BicycleImage180 from './Image/bicycle180.png';
 import BicycleImage270 from './Image/bicycle270.png';
 import EventInput from "./EventInput";
-import Button_Reload from "./Button_Reload";
 
 const Picture = styled.View`
 width: 100px;
@@ -139,17 +137,7 @@ const Q1 = () => {
                         </SafeAreaView>
                     </SafeAreaView>
                 </ScrollView>
-
-                    {/* <SafeAreaView style={{ flex:0.5, borderTopWidth: 3, backgroundColor: '#d4d1cb' }}>
-                        <Button_Reload onPress={ReloadPress}/>
-
-                        <SafeAreaView style={{ alignItems: 'center'}}>
-                            <EventInput answer1={countChi} answer2={countGla} answer3={countBic} ReloadPress={ReloadPress}/>
-                        </SafeAreaView>
-
-                    </SafeAreaView> */}
                     <EventInput answer1={countChi} answer2={countGla} answer3={countBic} ReloadPress={ReloadPress}/>
-                {/* </ScrollView> */}
             </SafeAreaView>
         )
     }

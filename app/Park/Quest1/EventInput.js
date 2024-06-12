@@ -48,7 +48,6 @@ const EventInput = (props) => {
                     <TextInput style={{ borderBottomWidth: 1, fontSize: 20, width: 100, textAlign: 'center'}}
                     placeholder="" maxLength={1} keyboardType="number-pad" returnKeyType="next" onChangeText={_onChangeText1} />
                     <Text style={{fontSize: 20}}>개 </Text>
-                    {/* <Text style = {{ margin: 10, fontSize: 10 }}>정답: {props.answer1}</Text> */}
                 </SafeAreaView>
                 <SafeAreaView style={{ width: 30, height: 30 }} />
             </View>
@@ -58,7 +57,6 @@ const EventInput = (props) => {
                 <TextInput style={{ borderBottomWidth: 1, fontSize: 20, width: 100, textAlign: 'center'}}
                 placeholder="" maxLength={1} keyboardType="number-pad" returnKeyType="next" onChangeText={_onChangeText2} />
                 <Text style={{fontSize: 20}}>개 </Text>
-                {/* <Text style = {{ margin: 10, fontSize: 10 }}>정답: {props.answer2}</Text> */}
             </View>
 
             <View style = {{ margin: 10, flexDirection: 'row'}}>
@@ -66,7 +64,6 @@ const EventInput = (props) => {
                 <TextInput style={{ borderBottomWidth: 1, fontSize: 20, width: 100, textAlign: 'center'}}
                 placeholder="" maxLength={1} keyboardType="number-pad" returnKeyType="next" onChangeText={_onChangeText3} />
                 <Text style={{fontSize: 20}}>개 </Text>
-                {/* <Text style = {{ margin: 10, fontSize: 10 }}>정답: {props.answer3}</Text> */}
             </View>
 
             <View style = {{flexDirection:'row', borderTopWidth: 1, marginBottom: 5, borderStyle:'dotted'}}>

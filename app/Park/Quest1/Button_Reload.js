@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, Image } from 'react-native';
+import { TouchableOpacity, Image } from 'react-native';
 import RefreshImage from './Image/refresh.png';
 
 const Button_Reload = props => {

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components/native";
 import { Link, router } from "expo-router";
-import { Text, TouchableOpacity, Alert } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 
 
 const Container = styled.View`
@@ -24,7 +24,7 @@ const PrevPage = () => {
             alignItems: "center",
             borderRadius: 10,
             }}
-            onPress={() => { router.replace('../../Home'); }}
+            onPress={() => { router.replace('../../App'); }}
             >
             <Text style={{fontSize: 35}}>◀</Text>
             </TouchableOpacity>
