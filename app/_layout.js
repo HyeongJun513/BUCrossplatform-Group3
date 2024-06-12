@@ -22,7 +22,13 @@ export default function RootLayout() {
             <Stack.Screen
                 name="index"
                 options={{
-                    headerTitle: "Home",
+                    headerTitle: "Loading",
+                }}
+            />
+            <Stack.Screen
+                name="Home"
+                options={{
+                    headerTitle: "Loading",
                 }}
             />
             {/* <Stack.Screen
@@ -40,7 +46,7 @@ export default function RootLayout() {
             <Stack.Screen
                 name="App"
                 options={{
-                    headerTitle: "App",
+                    headerTitle: "메인화면",
                 }}
             />
             <Stack.Screen
@@ -61,6 +67,18 @@ export default function RootLayout() {
                     headerTitle: "Quiz3",
                 }}
             />
+            {/* <Stack.Screen
+                name="Lee/Q_1/App"
+                options={{
+                    headerTitle: "Quiz3",
+                }}
+            />
+            <Stack.Screen
+                name="Lee/Q_2_example/App"
+                options={{
+                    headerTitle: "Quiz4",
+                }}
+            /> */}
         </Stack>
     );//name="index"인 경우 index.js를 호출하여 상단의 이름을 바꿈.
-}
+};

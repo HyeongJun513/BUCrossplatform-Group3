@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components/native";
-import { Text } from "react-native";
+import { Text, Image, Dimensions } from "react-native";
 import { Link, router } from "expo-router";
+import LoadingBar1 from "../assets/images/Loading1.png";
+import LoadingBar2 from "../assets/images/Loading2.png";
+import LoadingBar3 from "../assets/images/Loading3.png";
+import LoadingBar4 from "../assets/images/Loading4.png";
+import LogoImage from '../assets/images/LOGO.png'
+
+
 const Container = styled.View`
     flex: 1;
     background-color: #ffffff;
@@ -10,11 +17,24 @@ const Container = styled.View`
 `;
 
 const Home = () => {
-    const [time, setTime] = useState(3);
+    const [time, setTime] = useState(4);
+    const windoWidth = Dimensions.get("window").width;
 
     useEffect(() => {
-        setTimeout(() => { router.replace('/App'); }, 3000);
+        setTimeout(() => { router.replace('/App'); }, 4000);
     }, []);
+
+    PrintLoading = () => {
+        if (time == 3) {
+            return <Image source={LoadingBar2} style={{width: windoWidth*0.9, height: windoWidth*0.9*0.1175}}/>
+        } else if (time == 2) {
+            return <Image source={LoadingBar3} style={{width: windoWidth*0.9, height: windoWidth*0.9*0.1175}}/>
+        } else if (time == 1) {
+            return <Image source={LoadingBar4} style={{width: windoWidth*0.9, height: windoWidth*0.9*0.1175}}/>
+        } else {
+            return <Image source={LoadingBar1} style={{width: windoWidth*0.9, height: windoWidth*0.9*0.1175}}/>
+        };
+    };
 
     if(time >= 1) {
         a = time;
@@ -22,13 +42,13 @@ const Home = () => {
     } else if (time == 0) {
         a = time;
         setTime(3);
-    }
+    };
 
     return (
-        <Container>
-            <Text style={{ fontSize: 30}}> Home 시작 화면 (로딩창) </Text>
-            <Text style={{ fontSize: 20 }}> {time}초뒤 App(Quiz) 컴포넌트 이동</Text>
-            <Link href="/Item">Go to Item</Link>
+        <Container style={{ backgroundColor: 'green'}}>
+            <Image source={LogoImage} style={{width: 180, height: 180}}/>
+            <Text style={{ fontSize: 35, color:'white', fontWeight:'bold' }}> 인지능력 향상 퀴즈 </Text> 
+            {PrintLoading()}
         </Container>
     );
 };
