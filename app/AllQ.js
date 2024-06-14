@@ -44,7 +44,7 @@ const AllQ = () => {
                 alignItems: "center",
                 borderRadius: 10,
                 margin: 10,
-                }} onPress={() => { router.navigate('/Lee/Q_1/App'); }}>
+                }} onPress={() => { router.replace('/Lee/Q_1/App'); }}>
                 <Text style={{fontSize: 20}}> 이동헌: 퀴즈3(2_36) </Text>
                 </TouchableOpacity>
 
@@ -56,7 +56,7 @@ const AllQ = () => {
                 alignItems: "center",
                 borderRadius: 10,
                 margin: 10,
-                }} onPress={() => { router.navigate('/Lee/Q_2_example/App'); }}>
+                }} onPress={() => { router.replace('/Lee/Q_2_example/App'); }}>
                 <Text style={{fontSize: 20}}> 이동헌: 퀴즈4(4_11) </Text>
                 </TouchableOpacity>
 
@@ -68,7 +68,7 @@ const AllQ = () => {
                 alignItems: "center",
                 borderRadius: 10,
                 margin: 10,
-                }} onPress={() => { router.navigate('/Yang/Q3_12/App'); }}>
+                }} onPress={() => { router.replace('/Yang/Q3_12/App'); }}>
                 <Text style={{fontSize: 20}}> 양유진: 퀴즈5(3_12) </Text>
                 </TouchableOpacity>
 
