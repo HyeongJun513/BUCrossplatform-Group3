@@ -7,8 +7,8 @@ const Icon = styled.Image`
     border-color: ${({ theme, correct }) => 
         correct ? theme.correct : theme.wrong};
     border: 1px;
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 50px;
     margin: 10px;
 `;
 const IconButton = ({ type, onPressOut, id, correct }) => {
