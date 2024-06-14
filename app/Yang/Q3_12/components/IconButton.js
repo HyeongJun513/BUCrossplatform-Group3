@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import PropTypes from 'prop-types';
-import { images } from '../images';
+import { images } from './images';
 const Icon = styled.Image`
     border-color: ${({ theme, correct }) => 
         correct ? theme.correct : theme.wrong};
