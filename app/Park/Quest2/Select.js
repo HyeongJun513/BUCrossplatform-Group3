@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components/native";
-import { View, Text, SafeAreaView, Image, TouchableOpacity, StatusBar, Dimensions } from 'react-native';
+import { Text, Image, TouchableOpacity, Dimensions } from 'react-native';
 import CheckImage1 from './Image/check1.png';
 import CheckImage2 from './Image/check2.png';
 
-const Container = styled.View`
+const Container = styled.SafeAreaView`
 width: 50px;
 height: 50px;
 background-color: white;
@@ -13,19 +13,19 @@ borderWidth: 1px;
 borderColor: black;
 `;
 
-const Picture = styled.View`
+const Picture = styled.SafeAreaView`
 width: 40px;
 height: 23px;
 background-color: white;
 margin: 0px 1px;
-`;//margin: 상하, 좌우
+`;
 
 const Select = (props) => {
     const [check, setCheck] = useState(0);
 
     const windoWidth = Dimensions.get("window").width;
     
-    const changeCheck = () => { //check가 0이면 출력 없음, 1이면 체크 그림 1 출력, 2이면 체크 그림 2 출력
+    const changeCheck = () => {
         a= String(props.GameNum);
         const test = [a];
 

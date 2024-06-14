@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components/native";
-import { Link, router } from "expo-router";
+import { router } from "expo-router";
 import { Text, TouchableOpacity, Alert } from "react-native";
 
-const Container = styled.View`
+const Container = styled.SafeAreaView`
     width: 50px;
     height: 50px;
     border-radius: 8px;
@@ -12,7 +12,7 @@ const Container = styled.View`
 `;
 
 const NextPage = (props) => {
-    return ( //정답이면 활성화, 정답 아니면 비활성화
+    return ( 
         (props.checkAnswer == '정답') ? 
         <Container>
             <TouchableOpacity style={{

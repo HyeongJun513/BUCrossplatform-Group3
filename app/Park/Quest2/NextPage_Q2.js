@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components/native";
-import { Link, router } from "expo-router";
+import { router } from "expo-router";
 import { Text, TouchableOpacity, Alert } from "react-native";
-import Q2 from "../Quest2/Q2";
 
-const Container = styled.View`
+const Container = styled.SafeAreaView`
     width: 50px;
     height: 50px;
     border-radius: 8px;
@@ -13,7 +12,7 @@ const Container = styled.View`
 `;
 
 const NextPage_Q2 = (props) => {
-    return ( //정답이면 활성화, 정답 아니면 비활성화
+    return (
         props.isAnswer ? 
         <Container>
             <TouchableOpacity style={{
@@ -24,8 +23,7 @@ const NextPage_Q2 = (props) => {
             justifyContent: "center",
             alignItems: "center",
             borderRadius: 10,
-            
-            }} onPress={() => { router.replace('../Quest3/Q3');}}>
+            }} onPress={() => { router.replace('../../Lee/Q_1/App');}}>
             <Text style={{fontSize: 35}}>▶</Text>
             </TouchableOpacity>
         </Container> : 

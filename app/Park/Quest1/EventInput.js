@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Alert, SafeAreaView } from "react-native";
+import { Text, TextInput, Alert, SafeAreaView } from "react-native";
 import Button_Answer from "./Button_Answer";
 import Button_Reload from "./Button_Reload";
 import NextPage from "./NextPage";
@@ -12,7 +12,7 @@ const EventInput = (props) => {
     const [checkAnswer, setCheckAnswer] = useState('입력중');
     const _onChangeText1 = text => setUserinput1(text);
     const _onChangeText2 = text => setUserinput2(text);
-    const _onChangeText3 = text => setUserinput3(text); //_onChange와 같은 기능
+    const _onChangeText3 = text => setUserinput3(text);
 
     const AnswerCheckPress = () => {
         a = 0;
@@ -35,12 +35,12 @@ const EventInput = (props) => {
         }
     }
 
-    return ( //text값이 바뀌면 리랜더링됨
+    return (
     <SafeAreaView style={{ borderTopWidth: 3, backgroundColor: '#d4d1cb'}}>
 
         <SafeAreaView style={{ alignItems: 'center'}}>
             
-            <View style = {{ margin: 10, flexDirection: 'row', width:'100%', justifyContent: 'space-between'}}>
+            <SafeAreaView style = {{ margin: 10, flexDirection: 'row', width:'100%', justifyContent: 'space-between'}}>
                 <Button_Reload onPress={props.ReloadPress}/>
 
                 <SafeAreaView style={{flexDirection:'row'}}>
@@ -50,29 +50,29 @@ const EventInput = (props) => {
                     <Text style={{fontSize: 20}}>개 </Text>
                 </SafeAreaView>
                 <SafeAreaView style={{ width: 30, height: 30 }} />
-            </View>
+            </SafeAreaView>
 
-            <View style = {{ margin: 10, flexDirection: 'row'}}>
+            <SafeAreaView style = {{ margin: 10, flexDirection: 'row'}}>
                 <Text style={{fontSize: 20}}> 안경: </Text>
                 <TextInput style={{ borderBottomWidth: 1, fontSize: 20, width: 100, textAlign: 'center'}}
                 placeholder="" maxLength={1} keyboardType="number-pad" returnKeyType="next" onChangeText={_onChangeText2} />
                 <Text style={{fontSize: 20}}>개 </Text>
-            </View>
+            </SafeAreaView>
 
-            <View style = {{ margin: 10, flexDirection: 'row'}}>
+            <SafeAreaView style = {{ margin: 10, flexDirection: 'row'}}>
                 <Text style={{fontSize: 20}}> 자전거: </Text>
                 <TextInput style={{ borderBottomWidth: 1, fontSize: 20, width: 100, textAlign: 'center'}}
                 placeholder="" maxLength={1} keyboardType="number-pad" returnKeyType="next" onChangeText={_onChangeText3} />
                 <Text style={{fontSize: 20}}>개 </Text>
-            </View>
+            </SafeAreaView>
 
-            <View style = {{flexDirection:'row', borderTopWidth: 1, marginBottom: 5, borderStyle:'dotted'}}>
-                <View style = {{flexDirection:'row', flex:1, justifyContent: 'space-between', marginTop: 5}}>
+            <SafeAreaView style = {{flexDirection:'row', borderTopWidth: 1, marginBottom: 5, borderStyle:'dotted'}}>
+                <SafeAreaView style = {{flexDirection:'row', flex:1, justifyContent: 'space-between', marginTop: 5}}>
                     <PrevPage style={{flexDirection:'row-reverse'}}/>
                     <Button_Answer AnswerCheckPress={AnswerCheckPress}/>
                     <NextPage checkAnswer={checkAnswer} style={{flexDirection:'row-reverse'}}/>
-                </View>
-            </View>
+                </SafeAreaView>
+            </SafeAreaView>
         </SafeAreaView>
     </SafeAreaView>
     );

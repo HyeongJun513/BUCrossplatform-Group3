@@ -50,6 +50,12 @@ export default function RootLayout() {
                 }}
             />
             <Stack.Screen
+                name="AllQ"
+                options={{
+                    headerTitle: "전체 퀴즈",
+                }}
+            />
+            <Stack.Screen
                 name="Park/Quest1/Q1"
                 options={{
                     headerTitle: "Quiz1",
@@ -67,7 +73,7 @@ export default function RootLayout() {
                     headerTitle: "Quiz3",
                 }}
             />
-            {/* <Stack.Screen
+            <Stack.Screen
                 name="Lee/Q_1/App"
                 options={{
                     headerTitle: "Quiz3",
@@ -78,7 +84,13 @@ export default function RootLayout() {
                 options={{
                     headerTitle: "Quiz4",
                 }}
-            /> */}
+            />
+            <Stack.Screen
+                name="Lee/Q_2_main/App"
+                options={{
+                    headerTitle: "Quiz4",
+                }}
+            />
         </Stack>
-    );//name="index"인 경우 index.js를 호출하여 상단의 이름을 바꿈.
+    );
 };

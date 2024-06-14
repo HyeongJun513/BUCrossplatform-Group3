@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Alert, Button, StatusBar } from 'react-native';
 import styled, { ThemeProvider } from 'styled-components/native';
-import hole1 from '..\images\hole1.png';
-import hole2 from '..\images\hole2.png';
-import hole3 from '..\images\hole3.png';
-import hole4 from '..\images\hole4.png';
-import hole5 from '..\images\hole5.png';
-import hole6 from '..\images\hole6.png';
-import key1 from '..\images\key1.png';
-import key2 from '..\images\key2.png';
-import key3 from '..\images\key3.png';
-import key4 from '..\images\key4.png';
-import key5 from '..\images\key5.png';
-import key6 from '..\images\key6.png';
+import hole1 from './images/hole1.png';
+import hole2 from './images/hole2.png';
+import hole3 from './images/hole3.png';
+import hole4 from './images/hole4.png';
+import hole5 from './images/hole5.png';
+import hole6 from './images/hole6.png';
+import key1 from './images/key1.png';
+import key2 from './images/key2.png';
+import key3 from './images/key3.png';
+import key4 from './images/key4.png';
+import key5 from './images/key5.png';
+import key6 from './images/key6.png';
 import { theme } from './theme';
 import IconButton from './components/IconButton';
 
@@ -72,34 +72,34 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-        <Container>
+        <QContainer>
         <StatusBar
           barStyle="light-content"
           backgroundColor={theme.background} //Android only
         />
             <Title>자물쇠의 모양에 맞게 열쇠를 찾으려 합니다. 알맞은 모양끼리 선택해보세요.</Title>
             <QContainer>
-                <Container>
+                <QContainer>
                   <List width={width}>
                     {Object.values(keys).map(item => (
                       <IconButton key={item.id} answer={item.answer} />
                     ))}
                   </List>
-                </Container>
-                <Container>
+                </QContainer>
+                <QContainer>
                 <List width={width}>
                     {Object.values(holes).map(item => (
                       <IconButton key={item.id} answer={item.answer} />
                     ))}
                   </List>
-                </Container>
+                </QContainer>
             </QContainer>
             <ButtonContainer>
               <Button>
                 <Text>Home</Text>
               </Button>
             </ButtonContainer>
-        </Container>
+        </QContainer>
     </ThemeProvider>
   );
 }

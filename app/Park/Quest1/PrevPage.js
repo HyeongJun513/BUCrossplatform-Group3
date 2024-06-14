@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components/native";
-import { Link, router } from "expo-router";
+import { router } from "expo-router";
 import { Text, TouchableOpacity } from "react-native";
 
 
-const Container = styled.View`
+const Container = styled.SafeAreaView`
     width: 50px;
     height: 50px;
     border-radius: 8px;

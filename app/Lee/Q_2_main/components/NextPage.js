@@ -24,7 +24,7 @@ const NextPage = (props) => {
             alignItems: "center",
             borderRadius: 10,
             
-            }} onPress={() => { router.replace('../Quest2/Q2'); }}>
+            }} onPress={() => { router.replace('../../../Yang/Q3_12/App'); }}>
             <Text style={{fontSize: 35}}>▶</Text>
             </TouchableOpacity>
         </Container> : 

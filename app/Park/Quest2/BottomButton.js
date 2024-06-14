@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components/native";
-import { Link } from "expo-router";
-import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity, StatusBar, Dimensions, Button, Alert } from 'react-native';
-import Select from "./Select";
+import { SafeAreaView } from 'react-native';
 import Button_Submit from "./Button_Submit";
 import Button_Reload from "./Button_Reload_Q2";
 import PrevPage from "./PrevPage_Q2";
@@ -14,7 +11,7 @@ const BottomButton = (props) => {
 
     const AnswerCheckPress2 = () => {
         a = false;
-        if (String(props.AnswerArr) == String(props.userInputArr)) { //배열 비교 후 정답 출력
+        if (String(props.AnswerArr) == String(props.userInputArr)) {
             a= true;
         } else {
             a= false;

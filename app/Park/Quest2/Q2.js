@@ -1,40 +1,36 @@
 import React, { useState } from "react";
-import { Text, SafeAreaView, ScrollView, StatusBar, Alert } from 'react-native';
+import { Text, SafeAreaView, ScrollView, Alert } from 'react-native';
 import Select from "./Select";
-import Button_Submit from "./Button_Submit";
-import Button_Reload from "./Button_Reload_Q2";
-import PrevPage from "./PrevPage_Q2";
-import NextPage from "./NextPage_Q2";
 import BottomButton from "./BottomButton";
 
 const Q2 = () => {
-    const [reload, setReload] = useState(0); //새로고침용
+    const [reload, setReload] = useState(0); 
 
     trueCount = 0;
     falseCount = 0;
 
-    RandNum = Math.floor(Math.random() * 40 + 1); //1~40사이의 랜덤값 리턴
-    userInputArr = []; //유저 입력이 적힌 배열 생성
-    AnswerArr = []; //정답이 적힌 배열 생성
+    RandNum = Math.floor(Math.random() * 40 + 1);
+    userInputArr = []; 
+    AnswerArr = []; 
 
-    for (i=0; i<60; i++) { //최대 i개의 길이 배열 생성
+    for (i=0; i<60; i++) { 
         userInputArr.push(0);
     }
     
-    const checkNum = (a, b, c) => { //a:체크 개수, b:369번호, c:인덱스 번호
-        console.log('checkNum 실행!'); //a는 Select의 체크 개수
+    const checkNum = (a, b, c) => {
+        console.log('checkNum 실행!');
         console.log('체크 개수 : ' + a);
         console.log('GameNum : ' + b);
         console.log('indexNum : ' + c);
 
         console.log('이전 userInputArr : ' +userInputArr);
-        userInputArr.splice(c, 1, a); //c번째 인덱스의 값을 a값으로 변경
+        userInputArr.splice(c, 1, a); 
         console.log('이후 userInputArr : ' +userInputArr);
     }
 
-    const solution = (a) => { //개수 세기
+    const solution = (a) => { 
         count = 0;
-        String(a).split('').map((n)=> { //문자열 나누기
+        String(a).split('').map((n)=> {
             if(['3','6','9'].includes(n)){
             count++
             }
@@ -42,7 +38,7 @@ const Q2 = () => {
         return count;
     }
 
-    for (i=0; i<60; i++) { //최대 i개의 길이 배열 생성
+    for (i=0; i<60; i++) { 
         AnswerArr.push(solution(RandNum+i));
     }
 
@@ -53,7 +49,7 @@ const Q2 = () => {
         console.log('AnswerArr 배열 : '+AnswerArr);
         console.log('userInputArr 배열 : ' +userInputArr);
 
-        if (String(AnswerArr) == String(userInputArr)) { //배열 비교 후 정답 출력
+        if (String(AnswerArr) == String(userInputArr)) { 
             Alert.alert('정답','정답입니다!');
         } else {
             Alert.alert('오답','오답입니다');

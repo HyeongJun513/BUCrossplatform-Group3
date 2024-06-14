@@ -15,60 +15,60 @@ import BicycleImage180 from './Image/bicycle180.png';
 import BicycleImage270 from './Image/bicycle270.png';
 import EventInput from "./EventInput";
 
-const Picture = styled.View`
+const Picture = styled.SafeAreaView`
 width: 100px;
 height: 100px;
 background-color: gray;
 margin: 5px 10px;
-`;//margin: 상하, 좌우
+`;
 
-const RandNum = (a) => Math.floor(Math.random() * a); //0~a-1사이의 랜덤값 리턴
+const RandNum = (a) => Math.floor(Math.random() * a);
 
 const Q1 = () => {
     const [Change, setChange] = useState(0);
 
-    const RandPicture = (a) => { //0~2사이의 값에 따라 이미지 리턴
+    const RandPicture = (a) => { 
         rotate = RandNum(4);
         if(rotate==0) {
             switch(a) {
-                case 0: //0: 닭
+                case 0:
                     return <Image source={ChickenImage0} style={{width: 100, height: 100}}/>
-                case 1: //1: 안경
+                case 1:
                     return <Image source={GlassesImage0} style={{width: 100, height: 100}}/>
-                case 2: //2: 자전거
+                case 2:
                     return <Image source={BicycleImage0} style={{width: 100, height: 100}}/>
                 default:
                     return <Text> 오류 입니다.</Text>
             }
         } else if (rotate==1) {
             switch(a) {
-                case 0: //0: 닭
+                case 0:
                     return <Image source={ChickenImage90} style={{width: 100, height: 100}}/>
-                case 1: //1: 안경
+                case 1:
                     return <Image source={GlassesImage90} style={{width: 100, height: 100}}/>
-                case 2: //2: 자전거
+                case 2:
                     return <Image source={BicycleImage90} style={{width: 100, height: 100}}/>
                 default:
                     return <Text> 오류 입니다.</Text>
             }
         } else if (rotate==2) {
             switch(a) {
-                case 0: //0: 닭
+                case 0:
                     return <Image source={ChickenImage180} style={{width: 100, height: 100}}/>
-                case 1: //1: 안경
+                case 1:
                     return <Image source={GlassesImage180} style={{width: 100, height: 100}}/>
-                case 2: //2: 자전거
+                case 2:
                     return <Image source={BicycleImage180} style={{width: 100, height: 100}}/>
                 default:
                     return <Text> 오류 입니다.</Text>
             }
         } else if (rotate==3) {
             switch(a) {
-                case 0: //0: 닭
+                case 0:
                     return <Image source={ChickenImage270} style={{width: 100, height: 100}}/>
-                case 1: //1: 안경
+                case 1:
                     return <Image source={GlassesImage270} style={{width: 100, height: 100}}/>
-                case 2: //2: 자전거
+                case 2:
                     return <Image source={BicycleImage270} style={{width: 100, height: 100}}/>
                 default:
                     return <Text> 오류 입니다.</Text>
@@ -76,19 +76,19 @@ const Q1 = () => {
         }
     }
 
-    const Print = () => { //문제 출력
+    const Print = () => { 
         countChi = 0;
         countGla = 0;
         countBic = 0;
         arr = [];
 
-        for (i=0; i<12; i++) { //arr[] 배열에 랜덤값 12개 삽입
+        for (i=0; i<12; i++) {
             arr.push(RandNum(3));
         }
 
         console.log(arr);
 
-        arr.map((a) => { //(엘리먼트, 인덱스 번호), 개수 세기
+        arr.map((a) => { 
             if (a == 0) {
                 countChi += 1;
             } else if (a == 1) {
@@ -98,7 +98,7 @@ const Q1 = () => {
             }
         })
 
-        const Line = (a) => { //그림 1줄 출력
+        const Line = (a) => { 
             return (
                 <SafeAreaView style={{flexDirection: 'row', backgroundColor: 'white', alignItems: 'center'}}>
                     <Picture>

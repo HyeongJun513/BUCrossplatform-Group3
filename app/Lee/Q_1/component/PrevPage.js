@@ -24,7 +24,7 @@ const PrevPage = () => {
             alignItems: "center",
             borderRadius: 10,
             }}
-            onPress={() => { router.replace('../../App'); }}
+            onPress={() => { router.replace('../../Park/Quest2/Q2'); }}
             >
             <Text style={{fontSize: 35}}>◀</Text>
             </TouchableOpacity>
