@@ -1,13 +1,12 @@
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import { Stack } from 'expo-router';
-SplashScreen.preventAutoHideAsync(); //SplashScreen : 앱이 뜰 때, 서버에서 데이터를 가져오는 동안 사용자에게 보여주는 스크린.(일종의 로딩?)
-//preventAutoHideAsync : SplashScreen을 감추지 말고 보여줘라 라는 의미
+SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
-    useEffect(() => { //첫번째 리턴 후에 한번만 호출, 
-        SplashScreen.hideAsync(); //SplashScreen을 감춰라
+    useEffect(() => {
+        SplashScreen.hideAsync();
     }, []);
-    return ( //헤더 부분의 스타일 지정
+    return (
         <Stack screenOptions={{
             cardStyle: { backgroundColor: "#ffffff" },
             headerStyle: {
@@ -31,18 +30,6 @@ export default function RootLayout() {
                     headerTitle: "Loading",
                 }}
             />
-            {/* <Stack.Screen
-                name="Item"
-                options={{
-                    headerTitle: "Item",
-                }}
-            /> */}
-            {/* <Stack.Screen
-                name="List"
-                options={{
-                    headerTitle: "List",
-                }}
-            /> */}
             <Stack.Screen
                 name="App"
                 options={{
@@ -89,6 +76,12 @@ export default function RootLayout() {
                 name="Lee/Q_2_main/App"
                 options={{
                     headerTitle: "Quiz4",
+                }}
+            />
+            <Stack.Screen
+                name="Yang/Q3_12/App"
+                options={{
+                    headerTitle: "Quiz5",
                 }}
             />
         </Stack>
