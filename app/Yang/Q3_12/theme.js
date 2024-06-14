@@ -1,4 +1,6 @@
 export const theme = {
-    corret: '#10e333',
+    correct: '#10e333',
     wrong: '#cf1313',
+    main: '#778bdd',
+    text: '#cfcfcf',
 };
