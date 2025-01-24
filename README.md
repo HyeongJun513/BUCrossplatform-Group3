@@ -1,50 +1,27 @@
-# Welcome to your Expo app 👋
+# :question:인지능력향상퀴즈
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## :bulb:프로젝트 소개
+![MainScreen](./images/1Mainpage.png)
 
-## Get started
+**프로젝트 기간** : 2024.05 ~ 2024.06<br>
+**인원** : 3인 <br>
+React-Native를 이용하여 제작한 첫 프로젝트로, 3인 협업으로 진행하여 팀원마다 1~2개의 퀴즈를 담당하여 총 5개의 퀴즈를 출제합니다.
+노인들을 대상으로 노인들의 인지능력 향상을 위한 간단한 퀴즈를 주제로 제작되었습니다.
 
-1. Install dependencies
+## :clipboard:기술스택
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/reactnative-61DAFB?style=for-the-badge&logo=react&logoColor=black">
+<img src="https://img.shields.io/badge/expo-000020?style=for-the-badge&logo=expo&logoColor=white">
 
-   ```bash
-   npm install
-   ```
+## :computer:주요화면
+### 주요 퀴즈화면
+![Quiz1](./images/2Quiz1.png)
+- 닭, 안경, 자전거 세 가지의 사진이 랜덤한 개수와 위치에 출력되며 알맞은 개수를 입력합니다.
 
-2. Start the app
+![Quiz2C](./images/5Quiz2Input.png)
+- 숫자 3,6,9가 포함된 부분을 모두 터치하여 체크합니다.
 
-   ```bash
-    npx expo start
-   ```
+### 시연
+![Demonstration](./images/Demonstration.gif)
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## :notebook:비고
